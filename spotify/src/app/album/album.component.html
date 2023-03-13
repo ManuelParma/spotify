@@ -1,0 +1,6 @@
+<p *ngIf="!album || album == {}">No album found</p>
+<p>{{album.name}}</p>
+<img src="{{album.images[0].url}}" alt="image">
+<ul>
+  <li *ngFor="let t of tracks"><a href="javascript:void(0)" [routerLink]="['artists', t.id]">{{t.name}}</a></li>
+</ul>
